@@ -1,0 +1,168 @@
+
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" content="#101114">
+    <title>GD Central | Geometry Dash News</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header class="navbar">
+        <a class="logo" href="#">GD<span>Central</span></a>
+        <nav>
+            <a href="#latest">Latest News</a>
+            <a href="#updates">Updates</a>
+            <a href="#demonlist">Demonlist</a>
+        </nav>
+    </header>
+
+    <main>
+        <section class="hero">
+            <p class="eyebrow">YOUR GEOMETRY DASH NEWS HUB</p>
+            <h1>The Dash<br>never stops.</h1>
+            <p class="hero-text">
+                Every update. Every event level.
+                Every legendary verification.
+                All in one place.
+            </p>
+            <a class="hero-button" href="#latest"
+               onclick="document.getElementById('latest').scrollIntoView({behavior:'smooth'}); return false;">
+                Explore the news ↗
+            </a>
+        </section>
+
+                </section>
+
+        <!-- CREATOR OF THE DAY -->
+        <section id="creator-spotlight" class="creator-spotlight">
+            <div class="creator-heading">
+                <p class="eyebrow">YOUR DAILY DOSE OF GD</p>
+                <h2>Creator of the Day<span>.</span></h2>
+                <p class="section-description">
+                    Celebrating the players and creators who make Geometry Dash special.
+                </p>
+            </div>
+
+            <div class="creator-feature">
+                <div class="creator-art" aria-hidden="true">
+                    <span id="creator-initials">V</span>
+                    <div class="creator-art-label">GD CENTRAL</div>
+                </div>
+
+                <div class="creator-info">
+                    <p class="creator-day-label">
+                        <span class="live-dot"></span>
+                        <span id="creator-day-number">DAY 01</span>
+                        · DAILY SPOTLIGHT
+                    </p>
+
+                    <h3 id="creator-name">Vortrox</h3>
+
+                    <p id="creator-description">
+                        Discover one of the Geometry Dash community's featured creators.
+                    </p>
+
+                    <a
+                        id="creator-link"
+                        class="hero-button"
+                        href="https://www.youtube.com/results?search_query=Vortrox+Geometry+Dash"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                    >
+                        Explore creator ↗
+                    </a>
+
+                    <p class="creator-cycle-note">
+                        New featured creator every day. The lineup repeats after the final creator.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <section class="breaking-wrap">
+            <div class="breaking-banner">
+                <div class="breaking-label">
+                    <span class="live-dot"></span>
+                    NEWSROOM SPOTLIGHT
+                </div>
+                <h2>Chasing the next Top 1.</h2>
+                <p>Follow extreme demon verifications and changes in the hardest-level rankings.</p>
+                <button id="spotlight-btn" class="outline-button">
+                    Read the story ↗
+                </button>
+                <p class="demo-note">FEATURED TOPIC · NOT A BREAKING NEWS CLAIM</p>
+            </div>
+        </section>
+
+        <section id="latest" class="news-section">
+            <div class="section-heading">
+                <p class="eyebrow">THE NEWSROOM</p>
+                <h2>Stay in the loop.</h2>
+                <p class="section-description">
+                    The latest topics, official announcements, and community rankings.
+                </p>
+            </div>
+
+            <label class="search-box">
+                <span aria-hidden="true">⌕</span>
+                <input id="search-input" type="search"
+                    placeholder="Search news, updates, levels..."
+                    aria-label="Search news articles">
+            </label>
+
+            <div class="filter-bar" aria-label="Filter news">
+                <button class="filter-btn active" data-filter="all" aria-pressed="true">All news</button>
+                <button class="filter-btn" data-filter="updates" aria-pressed="false">Updates</button>
+                <button class="filter-btn" data-filter="events" aria-pressed="false">Event levels</button>
+                <button class="filter-btn" data-filter="demonlist" aria-pressed="false">Demonlist</button>
+            </div>
+
+            <p id="results-count" class="results-count" aria-live="polite"></p>
+            <div id="news-grid" class="news-grid"></div>
+        </section>
+
+        <section id="updates" class="sources-section">
+            <p class="eyebrow">FOLLOW THE FACTS</p>
+            <h2>Our sourcebook.</h2>
+            <p class="section-description">
+                Check original sources before treating a story as confirmed news.
+            </p>
+            <div class="source-links">
+                <a href="https://store.steampowered.com/news/app/322170/"
+                   target="_blank" rel="noopener noreferrer">
+                    Official Steam announcements ↗
+                </a>
+                <a id="demonlist" href="https://pointercrate.com/demonlist/"
+                   target="_blank" rel="noopener noreferrer">
+                    Pointercrate Demonlist ↗
+                </a>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <a class="logo" href="#">GD<span>Central</span></a>
+        <p>An unofficial Geometry Dash fan project.</p>
+        <p>Not affiliated with RobTop Games.</p>
+    </footer>
+
+    <dialog id="article-dialog" class="article-dialog">
+        <div class="dialog-top">
+            <span class="eyebrow">GD CENTRAL REPORT</span>
+            <button id="close-dialog" class="close-button" aria-label="Close article">✕</button>
+        </div>
+        <p id="article-category" class="category"></p>
+        <h2 id="article-title"></h2>
+        <p id="article-date" class="article-date"></p>
+        <div id="article-body" class="article-body"></div>
+        <a id="article-source" class="hero-button" href="#"
+           target="_blank" rel="noopener noreferrer">
+            Read original source ↗
+        </a>
+    </dialog>
+
+    <script src="script.js"></script>
+</body>
+</html>
